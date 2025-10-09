@@ -8,3 +8,4 @@ if (max_number < min_number):
 else:
   rnd_number = randint(min_number, max_number)
   print(rnd_number)
+  
