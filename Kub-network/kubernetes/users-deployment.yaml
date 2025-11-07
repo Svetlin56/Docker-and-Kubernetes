@@ -4,7 +4,7 @@ metadata:
   name: users-deployment
 spec:
   replicas: 1
-  selector:
+  selector: 
     matchLabels:
       app: users
   template:
@@ -13,9 +13,9 @@ spec:
         app: users
     spec:
       containers:
-      - name: users
-        image: svetlinvatev/kub-demo-users:latest
-        env:
-        - name: AUTH_ADDRESS
-          # value: "10.99.66.243"
-          value: "auth-service.default"
+        - name: users
+          image: academind/kub-demo-users:latest
+          env:
+            - name: AUTH_ADDRESS
+              # value: "10.99.104.252"
+              value: "auth-service.default"

@@ -4,7 +4,7 @@ metadata:
   name: tasks-deployment
 spec:
   replicas: 1
-  selector:
+  selector: 
     matchLabels:
       app: tasks
   template:
@@ -13,11 +13,11 @@ spec:
         app: tasks
     spec:
       containers:
-      - name: tasks
-        image: svetlinvatev/kub-demo-tasks:latest
-        env:
-        - name: AUTH_ADDRESS
-          # value: "10.99.66.243"
-          value: "auth-service.default"
-        - name: TASKS_FOLDER
-          value: tasks
+        - name: tasks
+          image: academind/kub-demo-tasks:latest
+          env:
+            - name: AUTH_ADDRESS
+              # value: "10.99.104.252"
+              value: "auth-service.default"
+            - name: TASKS_FOLDER
+              value: tasks
